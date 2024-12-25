@@ -12,7 +12,7 @@ pub enum MyError {
 
 #[tokio::main]
 async fn main(){
-    let res = reqwest::get("https://dummyjson.com/quotes/1").await.unwrap();
+    let res = reqwest::get("https://dummyjson.com/quotes/random").await.unwrap();
     println!("Status: {}",res.status());
     // println!("Header:\n {:#?}",res.headers());
     let body = res.text().await.unwrap();
